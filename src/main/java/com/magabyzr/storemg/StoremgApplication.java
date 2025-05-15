@@ -15,6 +15,10 @@ public class StoremgApplication {
         //var orderService = new OrderService(new PayPalPaymentService());                 //replaced by Bean, so Spring creates objects and injects dependencies automatically for us.
         //orderService.setPaymentService(new PayPalPaymentService());                     //to use the setter from orderService.
         orderService.placeOrder();
+
+        //to send a message
+        var manager = context.getBean(NotificationManager.class);
+        manager.sendNotification("This is a test message");
     }
 
 }
