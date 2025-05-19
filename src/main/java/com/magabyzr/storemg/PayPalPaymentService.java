@@ -2,7 +2,7 @@ package com.magabyzr.storemg;
 
 import org.springframework.stereotype.Service;
 
-@Service("paypal")                                                                        //You can also use @Component
+//@Service("paypal")                                                                    //Bean configuration with annotation. You can also use @Component
 public class PayPalPaymentService implements PaymentService{
     @Override
     public void processPayment(double amount) {

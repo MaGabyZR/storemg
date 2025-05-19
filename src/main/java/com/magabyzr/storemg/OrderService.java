@@ -4,14 +4,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
-@Service                                                                     //or @Component
+//@Service                                                                     //or @Component Bean configuration with annotation.
 public class OrderService {
     private PaymentService paymentService;                                  //setter below.
 
     //@Autowired                                                              //used in older versions and if you have multiple constructors.
-    public OrderService(@Qualifier("stripe") PaymentService paymentService){                     //also annotate the PayPalServiceService class
-       this.paymentService = paymentService;
-    }
+    public OrderService(PaymentService paymentService){ this.paymentService = paymentService;}                   //also annotate the PayPalServiceService class
 
     public void placeOrder(){
         paymentService.processPayment(10);

@@ -1,9 +1,9 @@
 spring:
   application:
     name: storemg
-
 stripe:
   apiUrl: https://api.stripe.com
   enable: true
   timeout: 1000
   supported-currencies: USD,EUR,GBP
+payment-gateway: paypal
