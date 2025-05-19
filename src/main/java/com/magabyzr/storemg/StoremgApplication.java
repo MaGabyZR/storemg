@@ -19,6 +19,10 @@ public class StoremgApplication {
         //to send a message
         //var manager = context.getBean(NotificationManager.class);
         //manager.sendNotification("This is a test message");
+
+        //to create a HeavyResource with Lazy
+        var resource = context.getBean(HeavyResource.class);
+
     }
 
 }

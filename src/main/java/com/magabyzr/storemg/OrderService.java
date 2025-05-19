@@ -9,7 +9,10 @@ public class OrderService {
     private PaymentService paymentService;                                  //setter below.
 
     //@Autowired                                                              //used in older versions and if you have multiple constructors.
-    public OrderService(PaymentService paymentService){ this.paymentService = paymentService;}                   //also annotate the PayPalServiceService class
+    public OrderService(PaymentService paymentService){                       //also annotate the PayPalServiceService class
+        this.paymentService = paymentService;
+        System.out.println("Order Service Created");
+    }
 
     public void placeOrder(){
         paymentService.processPayment(10);

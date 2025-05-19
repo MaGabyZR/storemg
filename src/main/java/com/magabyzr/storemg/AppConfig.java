@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+
 @Configuration                                                  //To tell spring this class is a source of Bean definition.
 public class AppConfig {
     @Value("${payment-gateway:stripe}")
