@@ -9,7 +9,7 @@ public class OrderService {
     private PaymentService paymentService;                                  //setter below.
 
     //@Autowired                                                              //used in older versions and if you have multiple constructors.
-    public OrderService(@Qualifier("paypal") PaymentService paymentService){                     //also annotate the PayPalServiceService class
+    public OrderService(@Qualifier("stripe") PaymentService paymentService){                     //also annotate the PayPalServiceService class
        this.paymentService = paymentService;
     }
 

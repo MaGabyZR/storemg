@@ -17,8 +17,8 @@ public class StoremgApplication {
         orderService.placeOrder();
 
         //to send a message
-        var manager = context.getBean(NotificationManager.class);
-        manager.sendNotification("This is a test message");
+        //var manager = context.getBean(NotificationManager.class);
+        //manager.sendNotification("This is a test message");
     }
 
 }
