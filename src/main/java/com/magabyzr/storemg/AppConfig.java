@@ -3,6 +3,7 @@ package com.magabyzr.storemg;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Scope;
 
 
 @Configuration                                                  //To tell spring this class is a source of Bean definition.
@@ -21,6 +22,7 @@ public class AppConfig {
     }
 
     @Bean
+    @Scope("prototype")
     public OrderService orderService() {
         if (paymentGateway.equals("stripe")) {
             return new OrderService(stripe());
