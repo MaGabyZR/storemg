@@ -1,6 +1,10 @@
 spring:
   application:
     name: storemg
+  datasource:
+    url: jdbc:mysql://localhost:3306/storemg?createDatabaseIfNotExist=true
+    username: root
+    password: magaby2280@
 stripe:
   apiUrl: https://api.stripe.com
   enable: true

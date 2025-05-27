@@ -11,8 +11,7 @@ public class StoremgApplication {
     public static void main(String[] args) {
         ApplicationContext context = SpringApplication.run(StoremgApplication.class, args);
         var userService = context.getBean(UserService.class);
-        userService.registerUser(new User(1L, "gaby@gmail.com", "12345", "Mosh"));
-        userService.registerUser(new User(1L, "gaby@gmail.com", "12345", "Mosh"));
+        userService.registerUser(new User(1L, "gaby@gmail.com", "12345", "MaGaby"));
     }
 
 }
