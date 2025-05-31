@@ -79,6 +79,20 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
+            <plugin>
+                <groupId>org.flywaydb</groupId>
+                <artifactId>flyway-maven-plugin</artifactId>
+                <version>10.20.1</version> <!-- Specify the version you want to use -->
+                <configuration>
+                    <url>jdbc:mysql://localhost:3306/storemg</url> <!-- Replace with your DB URL -->
+                    <user>root</user> <!-- Replace with your DB username -->
+                    <password>magaby2280@</password> <!-- Replace with your DB password -->
+                    <locations>
+                        <location>classpath:db/migration</location> <!-- Adjust if needed -->
+                    </locations>
+                    <cleanDisabled>false</cleanDisabled>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 
